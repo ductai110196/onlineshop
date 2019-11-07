@@ -1,0 +1,25 @@
+/*custom css boostrap*/
+
+.header_title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.day {
+    float: right;
+    font-size: 20px;
+    font-weight: 800;
+    color: #919191;
+}
+
+.day::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f073";
+    margin: 0 5px;
+}
+
+.day:hover {
+    color: skyblue;
+    transition: .3s all;
+}
