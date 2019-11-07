@@ -17,7 +17,7 @@
 <hr>
 <table class="table table-bordered table-hover table-responsive-md table-responsive-sm table-responsive-lg">
     <thead>
-        <tr class="bg-success">
+        <tr class="bg-success text-white">
             <th scope="col">Stt</th>
             <th scope="col">Tên Loại Hàng</th>
             <th scope="col">Tên Url</th>
@@ -36,15 +36,15 @@
             <td><?php echo $item->MetaTitle ?></td>
             <td>
                 <?php
-                    if ($item->ParentID == 0) {
-                        echo "Trống";
-                    } else {
-                        foreach ($before_head as $value) {
-                            if ($value->ID == $item->ParentID) {
-                                echo $value->Name;
+                        if ($item->ParentID == 0) {
+                            echo "Trống";
+                        } else {
+                            foreach ($before_head as $value) {
+                                if ($value->ID == $item->ParentID) {
+                                    echo $value->Name;
+                                }
                             }
-                        }
-                    } ?>
+                        } ?>
             </td>
             <td>
                 <button id="Status" value="<?php echo $item->Status ?>" data-id="<?php echo $item->ID ?>"

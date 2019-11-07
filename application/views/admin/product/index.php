@@ -16,7 +16,7 @@
 <hr>
 <table class="table table-responsive-md table-responsive-sm table-hover table-bordered">
     <thead>
-        <tr>
+        <tr class="bg-success text-white">
             <th scope="col">Stt</th>
             <th scope="col">Tên Sản Phẩm</th>
             <th scope="col">Mã Sản Phẩm</th>
@@ -44,12 +44,12 @@
             <td class="text-success font-weight-bold"><?php echo $item->Quantity  ?></td>
             <td>
                 <?php
-                    foreach ($before_content as $value) {
-                        if ($item->CategoryID == $value->ID) {
-                            echo $value->Name;
+                        foreach ($before_content as $value) {
+                            if ($item->CategoryID == $value->ID) {
+                                echo $value->Name;
+                            }
                         }
-                    }
-                    ?>
+                        ?>
             </td>
             <td class="text-info font-weight-bold">
                 <?php echo $item->Warranty < 0 ? 'Không bảo hành' : $item->Warranty ?></td>
