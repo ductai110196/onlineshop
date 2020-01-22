@@ -3,7 +3,7 @@ $(document).ready(function() {
     let url = "http://localhost:8000/onlineshop/index.php/admin/product";
     $(document).on("click", "#Status", function() {
         $value = $(this).val();
-        $id = $("#Status").attr("data-id");
+        $id = $(this).attr("data-id");
         $.get(url + "/status", {
             id: $id,
             status: $value
@@ -15,26 +15,9 @@ $(document).ready(function() {
             }
             setTimeout(() => {
                 window.location.reload();
-            }, 1000);
+            }, 100);
         });
     });
-
-    //add 
-    $(document).on("click", "#add_item", function() {
-        window.location.href = url + "/create";
-    });
-
-    setplugineditorandckfinder(1, 'mota');
-    setplugineditorandckfinder(1, 'chitiet');
-
-    $(document).on("click", "#img", function() {
-        setplugineditorandckfinder(0, '', 'hinhanh');
-    });
-
-    $(document).on('keyup', '#tensanpham', function() {
-        let val = $(this).val();
-        $("#texturl").val(replaceurl(val));
-    })
 
 });
 </script>

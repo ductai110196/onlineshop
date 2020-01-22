@@ -10,7 +10,7 @@
     <div class="col-md-6"><button class="btn btn-success" id="add_item"><i class="fas fa-plus"></i>&nbsp;Tạo Dữ
             Liệu</button></div>
     <div class="col-md-6"><span class="day"><?php date_default_timezone_set("Asia/Bangkok");
-                                            echo date("d-m-Y") ?></span></div>
+											echo date("d-m-Y") ?></span></div>
 </div>
 
 <hr>
@@ -32,7 +32,7 @@
     </thead>
     <tbody>
         <?php $i = 1;
-        foreach ($before_head as $item) { ?>
+		foreach ($before_head as $item) { ?>
         <tr>
             <th scope="row"><?php echo $i ?></th>
             <td style="max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
@@ -44,12 +44,12 @@
             <td class="text-success font-weight-bold"><?php echo $item->Quantity  ?></td>
             <td>
                 <?php
-                        foreach ($before_content as $value) {
-                            if ($item->CategoryID == $value->ID) {
-                                echo $value->Name;
-                            }
-                        }
-                        ?>
+					foreach ($before_content as $value) {
+						if ($item->CategoryID == $value->ID) {
+							echo $value->Name;
+						}
+					}
+					?>
             </td>
             <td class="text-info font-weight-bold">
                 <?php echo $item->Warranty < 0 ? 'Không bảo hành' : $item->Warranty ?></td>
@@ -64,6 +64,6 @@
                         class="far fa-trash-alt"></i>&nbsp;Xóa</a></td>
         </tr>
         <?php $i++;
-        } ?>
+		} ?>
     </tbody>
 </table>

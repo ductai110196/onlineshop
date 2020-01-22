@@ -65,7 +65,7 @@ h3 {
             <div class="form-group">
                 <label for="exampleInputEmail1">Giá Gốc (đ):</label>
                 <input type="text" name="giabandau" class="form-control" id="giabandau" placeholder="Nhập giá gốc"
-                    value="<?php echo $value[0]->Price ?>">
+                    value="<?php echo $value[0]->Price; ?>">
             </div>
         </div>
         <div class="col-md-10">
@@ -95,14 +95,14 @@ h3 {
                 <select name="danhmuc" id="" class="custom-select">
                     <option value="0">Trống</option>
                     <?php foreach ($before_head as $item) {
-                        if ($item->ParentID != 0) {
-                            if ($value[0]->CategoryID == $item->ID) {
-                                echo '<option selected value="' . $item->ID . '">' . $item->Name . '</option>';
-                            } else {
-                                echo '<option value="' . $item->ID . '">' . $item->Name . '</option>';
-                            }
-                        }
-                    } ?>
+						if ($item->ParentID != 0) {
+							if ($value[0]->CategoryID == $item->ID) {
+								echo '<option selected value="' . $item->ID . '">' . $item->Name . '</option>';
+							} else {
+								echo '<option value="' . $item->ID . '">' . $item->Name . '</option>';
+							}
+						}
+					} ?>
                 </select>
             </div>
         </div>
